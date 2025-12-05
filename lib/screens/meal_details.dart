@@ -32,6 +32,41 @@ class _MealDetailsState extends ConsumerState<MealDetails> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: [
+              Spacer(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Container(
+                  width: 35,
+                  height: 35,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(40),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color.fromARGB(
+                          255,
+                          247,
+                          218,
+                          175,
+                        ).withOpacity(0.5),
+                        spreadRadius: 4,
+                        blurRadius: 6,
+                        offset: Offset(0, 0),
+                      ),
+                    ],
+                  ),
+                  child: Center(child: Icon(Icons.close, color: Colors.black)),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
           padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 20.0),
           child: Row(
             children: [
