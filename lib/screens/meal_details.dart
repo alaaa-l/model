@@ -29,6 +29,7 @@ class _MealDetailsState extends ConsumerState<MealDetails> {
     final meals = ref.watch(MealsProvider);
     final rating = ref.watch(RatingProvider);
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
@@ -147,7 +148,7 @@ class _MealDetailsState extends ConsumerState<MealDetails> {
                   },
                   icon: Icon(
                     isFavorite ? Icons.favorite : Icons.favorite_border,
-                    color: Colors.grey,
+                    color: isFavorite ? Colors.deepOrangeAccent : Colors.grey,
                   ),
                 ),
               ),
